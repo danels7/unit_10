@@ -71,13 +71,16 @@ def main():
     print_menu()
     inp = get_input()
     while inp != 5:
+        print()
         path = paths[inp]
 
         print(f"Processing {path}...")
+        print()
 
         analyzer = WordAnalyzer(path)
         analyzer.process_file()
         analyzer.print_report()
+        print()
 
         print_menu()
         inp = get_input()
