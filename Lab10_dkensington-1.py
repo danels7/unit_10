@@ -47,8 +47,8 @@ def print_menu() -> None:
 
 
 def get_input() -> int:
-    inp = input("> ")
     while True:
+        inp = input("> ")
         try:
             num = int(inp)
         except ValueError:
