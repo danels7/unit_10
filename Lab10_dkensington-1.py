@@ -80,3 +80,7 @@ def main():
         analyzer.print_report()
 
     print("Goodbye!")
+
+
+if __name__ == "__main__":
+    main()
