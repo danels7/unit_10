@@ -9,6 +9,8 @@ Analyze how many times each word occurs in predetermined text files
 import pathlib, string
 
 class WordAnalyzer:
+    """Class for analyzing and printing count of each word in a file"""
+
     def __init__(self, filepath: str):
         self.__path: pathlib.Path = pathlib.Path(filepath)
         self.__words: dict[str, int] = dict()
