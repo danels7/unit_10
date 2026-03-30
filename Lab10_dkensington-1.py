@@ -36,3 +36,47 @@ class WordAnalyzer:
             print(f"{key:<{longest}}  :: {self.__words[key]}")
 
 
+def print_menu() -> None:
+    print("--- Word Analyzer ---")
+    print("Choose a file to analyze:")
+    print("1. Monte Cristo")
+    print("2. Princess Mars")
+    print("3. Tarzan")
+    print("4. Treasure Island")
+
+
+def get_input() -> int:
+    inp = input("> ")
+    while True:
+        try:
+            num = int(inp)
+        except ValueError:
+            print("Enter a number 1-5")
+            continue
+        if num < 1 or num > 5:
+            print("Enter a number 1-5")
+            continue
+        return num
+
+
+def main():
+    paths = {
+        1: "monte_cristo.txt",
+        2: "princess_mars.txt",
+        3: "Tarzan.txt",
+        4: "treasure_island.txt"
+    }
+
+    inp = 0
+    while inp != 5:
+        print_menu()
+        inp = get_input()
+        path = paths[inp]
+
+        print(f"Processing {path}...")
+
+        analyzer = WordAnalyzer(path)
+        analyzer.process_file()
+        analyzer.print_report()
+
+    print("Goodbye!")
