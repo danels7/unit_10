@@ -85,6 +85,7 @@ def main():
         print_menu()
         inp = get_input()
 
+    print()
     print("Goodbye!")
 
 
