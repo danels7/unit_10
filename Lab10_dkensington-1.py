@@ -8,7 +8,7 @@ class WordAnalyzer:
     def process_file(self) -> bool:
         if self.__path.exists():
             try:
-                file = self.__path.open()
+                file = self.__path.open(encoding='utf-8')
             except FileNotFoundError:
                 return False
         else:
