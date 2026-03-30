@@ -43,6 +43,7 @@ def print_menu() -> None:
     print("2. Princess Mars")
     print("3. Tarzan")
     print("4. Treasure Island")
+    print("5. Exit")
 
 
 def get_input() -> int:
