@@ -1,3 +1,11 @@
+"""
+Word Count Analyzer
+Daniel Kensington
+Analyze how many times each word occurs in predetermined text files
+3/29/2026
+"""
+
+
 import pathlib, string
 
 class WordAnalyzer:
