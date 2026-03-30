@@ -67,10 +67,9 @@ def main():
         4: "treasure_island.txt"
     }
 
-    inp = 0
+    print_menu()
+    inp = get_input()
     while inp != 5:
-        print_menu()
-        inp = get_input()
         path = paths[inp]
 
         print(f"Processing {path}...")
@@ -78,6 +77,9 @@ def main():
         analyzer = WordAnalyzer(path)
         analyzer.process_file()
         analyzer.print_report()
+
+        print_menu()
+        inp = get_input()
 
     print("Goodbye!")
 
