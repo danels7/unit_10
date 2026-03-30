@@ -28,3 +28,11 @@ class WordAnalyzer:
                     self.__words[word] = 1
 
         return True
+    
+    def print_report(self) -> None:
+        sorted_keys = sorted(self.__words.keys())
+        longest = len(max(sorted_keys, key=len))
+        for key in sorted_keys:
+            print(f"{key:<{longest}}  :: {self.__words[key]}")
+
+
